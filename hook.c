@@ -19,6 +19,7 @@ static int (*orig_system_property_read_callback)(const prop_info*, void (*)(void
 
 static void (*og_callback)(void* cookie, const char* name, const char* value, uint32_t serial) = NULL;
 
+
 static void overridden_callback(void *cookie, const char *name, const char *value, uint32_t serial) {
 
     char *replace_value = getprop(name);
